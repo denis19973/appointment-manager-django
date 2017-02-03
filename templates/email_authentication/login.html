@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block main_content %}
+    <div class="center">
+        <h3>Login page</h3>
+        <div id="login">
+            <form class="form-horizontal" name="LoginForm" action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                {% if next %}
+                    <input type="hidden" name="next" value="{{ next }}"/>
+                {% endif %}
+
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-4">
+                        <input class="form-control" id="inputEmail" placeholder="Email" type="email" name="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputName" class="col-lg-2 control-label">Name</label>
+                    <div class="col-lg-4">
+                        <input class="form-control" id="inputName" placeholder="Name" type="text" name="name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+{% endblock main_content %}
