@@ -1,8 +1,8 @@
 ##REQUIREMENTS:##
 
--djangorestframework
--python3.5
--Django1.10
+* djangorestframework
+* python3.5
+* Django1.10
 
 
 ##FUNCTIONALITY:##
@@ -14,3 +14,6 @@
 * intarface for adding appointments
 * API for get data about all appointments and tests for API
 * button 'My filled forms' only for authenticated users
+
+
+![picture alt](http://i63.tinypic.com/30jii9v.png "Daily view")
